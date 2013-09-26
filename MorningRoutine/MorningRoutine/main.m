@@ -13,7 +13,11 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         
-        // insert code here...
+        NSDate * now = [NSDate date];
+        NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+        [outputFormatter setDateFormat:@"HH:mm"];
+        NSString *newDateString = [outputFormatter stringFromDate:now];
+        NSLog(@"It's %@ AM.", newDateString);
         NSLog(@"Good morning, world!");
         
     }
